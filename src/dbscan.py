@@ -33,7 +33,7 @@ class DBSCAN(object):
                 
         return neighbor_indices
 
-    def fit(self, df, feature_cols=['Annual Income (k$)', 'Spending Score (1-100)']):
+    def fit(self, df, feature_cols=['0', '1', '2']):
         points = []
         for idx, row in df.loc[:, feature_cols].iterrows():
             points.append(Point(row.to_numpy()))
